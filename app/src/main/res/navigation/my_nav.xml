@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/authorization">
+
+
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.roomapp.fragments.list.ListFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.roomapp.fragments.add.AddFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.roomapp.fragments.update.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update" >
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.example.roomapp.model.User" />
+    </fragment>
+    <fragment
+        android:id="@+id/authorization"
+        android:name="com.example.roomapp.Authorization"
+        android:label="Authorization"
+        tools:layout="@layout/fragment_authorization" >
+        <action
+            android:id="@+id/action_authorization_to_adminMenu"
+            app:destination="@id/adminMenu" />
+        <action
+            android:id="@+id/action_authorization_to_userMenu"
+            app:destination="@id/userMenu" />
+        <action
+            android:id="@+id/action_authorization_to_registrationFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminMenu"
+        android:name="com.example.roomapp.AdminMenu"
+        android:label="Admin menu"
+        tools:layout="@layout/fragment_admin_menu" >
+        <action
+            android:id="@+id/action_adminMenu_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_adminMenu_to_cafeFragment"
+            app:destination="@id/cafeFragment" />
+        <action
+            android:id="@+id/action_adminMenu_to_assortment"
+            app:destination="@id/assortmentFragment" />
+        <action
+            android:id="@+id/action_adminMenu_to_realizationFragment"
+            app:destination="@id/realizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cafeFragment"
+        android:name="com.example.roomapp.fragments.list.CafeFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_cafe" >
+        <action
+            android:id="@+id/action_cafeFragment_to_adminMenu"
+            app:destination="@id/adminMenu" />
+        <action
+            android:id="@+id/action_cafeFragment_to_addCafeFragment"
+            app:destination="@id/addCafeFragment" />
+        <action
+            android:id="@+id/action_cafeFragment_to_updateCafeFragment22"
+            app:destination="@id/updateCafeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCafeFragment"
+        android:name="com.example.roomapp.fragments.add.AddCafeFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add_cafe" >
+        <action
+            android:id="@+id/action_addCafeFragment_to_cafeFragment"
+            app:destination="@id/cafeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateCafeFragment2"
+        android:name="com.example.roomapp.fragments.update.UpdateCafeFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update_cafe" >
+        <action
+            android:id="@+id/action_updateCafeFragment2_to_cafeFragment"
+            app:destination="@id/cafeFragment" />
+        <argument
+            android:name="currentCafe"
+            app:argType="com.example.roomapp.model.Cafe" />
+    </fragment>
+    <fragment
+        android:id="@+id/assortmentFragment"
+        android:name="com.example.roomapp.fragments.list.AssortmentFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_assortment" >
+        <action
+            android:id="@+id/action_assortmentFragment_to_addAssortmentFragment"
+            app:destination="@id/addAssortmentFragment" />
+        <action
+            android:id="@+id/action_assortmentFragment_to_updateAssortmentFragment"
+            app:destination="@id/updateAssortmentFragment" />
+        <action
+            android:id="@+id/action_assortmentFragment_to_adminMenu"
+            app:destination="@id/adminMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAssortmentFragment"
+        android:name="com.example.roomapp.fragments.add.AddAssortmentFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add_assortment" >
+        <action
+            android:id="@+id/action_addAssortmentFragment_to_assortmentFragment"
+            app:destination="@id/assortmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateAssortmentFragment"
+        android:name="com.example.roomapp.fragments.update.UpdateAssortmentFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update_assortment" >
+        <action
+            android:id="@+id/action_updateAssortmentFragment_to_assortmentFragment"
+            app:destination="@id/assortmentFragment" />
+        <argument android:name="currentAssortment"
+            app:argType = "com.example.roomapp.model.Assortment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/realizationFragment"
+        android:name="com.example.roomapp.fragments.list.RealizationFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_realization" >
+        <action
+            android:id="@+id/action_realizationFragment_to_addRealizationFragment"
+            app:destination="@id/addRealizationFragment" />
+        <action
+            android:id="@+id/action_realizationFragment_to_updateRealizationFragment"
+            app:destination="@id/updateRealizationFragment" />
+        <action
+            android:id="@+id/action_realizationFragment_to_adminMenu"
+            app:destination="@id/adminMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRealizationFragment"
+        android:name="com.example.roomapp.fragments.add.AddRealizationFragment"
+        android:label="Add"
+        tools:layout="@layout/fragment_add_realization" >
+        <action
+            android:id="@+id/action_addRealizationFragment_to_realizationFragment"
+            app:destination="@id/realizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRealizationFragment"
+        android:name="com.example.roomapp.fragments.update.UpdateRealizationFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update_realization" >
+        <action
+            android:id="@+id/action_updateRealizationFragment_to_realizationFragment"
+            app:destination="@id/realizationFragment" />
+        <argument android:name="currentRealization"
+            app:argType = "com.example.roomapp.model.Realization"/>
+    </fragment>
+    <fragment
+        android:id="@+id/userMenu"
+        android:name="com.example.roomapp.UserMenu"
+        android:label="User menu"
+        tools:layout="@layout/fragment_user_menu" >
+        <action
+            android:id="@+id/action_userMenu_to_assortmentFragment"
+            app:destination="@id/assortmentFragment" />
+        <action
+            android:id="@+id/action_userMenu_to_realizationFragment"
+            app:destination="@id/realizationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.roomapp.RegistrationFragment"
+        android:label="Registration"
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_authorization"
+            app:destination="@id/authorization" />
+    </fragment>
+</navigation>
