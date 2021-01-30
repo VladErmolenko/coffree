@@ -16,3 +16,8 @@ This app uses following stack of technologies:
 ## Coffee list realization
 
 ![List of plants](screenshots/coffee_list_scrn.png "Coffee list")
+
+## Assortment list realization
+
+![List of plants](screenshots/assortment_scrn.png "Coffee list")
+
