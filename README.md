@@ -12,3 +12,7 @@ This app uses following stack of technologies:
 ## Authorization
 
 ![List of plants](screenshots/authorization_scrn.png "Authorization screen")
+
+## Coffee list realization
+
+![List of plants](screenshots/coffee_list_scrn.png "Coffee list")
