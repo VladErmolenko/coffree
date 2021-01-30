@@ -8,3 +8,5 @@ This app uses following stack of technologies:
 * MVVM architecture model
 * Single activity
 * Kotlin coroutines
+
+![List of plants](screenshots/authorization_scrn.png "Authorization screen")
