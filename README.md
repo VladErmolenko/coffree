@@ -19,5 +19,11 @@ This app uses following stack of technologies:
 
 ## Assortment list realization
 
-![List of plants](screenshots/assortment_scrn.png "Coffee list")
+![List of plants](screenshots/assortment_scrn.png "Assortment list")
 
+screenshots/update_assortment_scrn.png
+
+
+## Assortment update realization
+
+![List of plants](screenshots/update_assortment_scrn.png "Update assortment")
