@@ -9,4 +9,6 @@ This app uses following stack of technologies:
 * Single activity
 * Kotlin coroutines
 
+## Authorization
+
 ![List of plants](screenshots/authorization_scrn.png "Authorization screen")
