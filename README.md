@@ -7,6 +7,7 @@ This app uses following stack of technologies:
 * Navigation component
 * MVVM architecture model
 * Single activity
+* Live Data
 * Kotlin coroutines
 
 ## Authorization
@@ -20,8 +21,6 @@ This app uses following stack of technologies:
 ## Assortment list realization
 
 ![List of plants](screenshots/assortment_scrn.png "Assortment list")
-
-screenshots/update_assortment_scrn.png
 
 
 ## Assortment update realization
